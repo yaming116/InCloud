@@ -42,7 +42,7 @@ jobs:
 
       - name: Running SubFinder for passive DNS enumeration
         run: |
-          subfinder -dL input/domains.txt -config config/subfinder-config.yaml -o output/passive_subdomains.txt
+          subfinder -dL input/domains.txt -config config/subfinder-config.yaml -pc config/pc-subfinder-config.yaml  -o output/passive_subdomains.txt
         shell: bash
 
       - name: Running dnsx for valid DNS filtering 
