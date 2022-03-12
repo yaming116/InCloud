@@ -83,7 +83,7 @@ jobs:
           git add output/xray.html
       - name: Commit results to Github
         run: |
-          git config --local user.email "admin@inbug.org"
+          git config --local user.email "yaming116@163.com"
           git config --global user.name "inbug-team"
           git commit -m "InCloud Report" -a --allow-empty
       - name: Push changes
