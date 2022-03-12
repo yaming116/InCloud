@@ -42,6 +42,8 @@ jobs:
 
       - name: Running SubFinder for passive DNS enumeration
         run: |
+          mkdir /home/runner/.config/subfinder
+          touch /home/runner/.config/subfinder/provider-config.yaml
           subfinder -dL input/domains.txt -config config/subfinder-config.yaml -provider-config config/pc-subfinder-config.yaml  -o output/passive_subdomains.txt
         shell: bash
 
